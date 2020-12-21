@@ -1,0 +1,12 @@
+{
+  "name": "vue-layer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.umd.js",
+  "keywords": [
+    "vue-layer",
+    "layui-layer"
+  ],
+  "author": "zhengvipin@gmail.com",
+  "license": "ISC"
+}
