@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "drag": "0.0.4",
     "jquery": "^3.5.1",
     "layui-layer": "^1.0.9",
     "vue": "^2.6.11"

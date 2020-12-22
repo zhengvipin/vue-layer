@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div style="padding: 12px;">
     <h1 v-text="layerdata.value"></h1>
     <br><br>
-    <button type="button" @click="change">点我改变父组件的值</button>
+    <button type="button" @click="change">点我改变父组件标题的值</button>
     <br><br>
     <button type="button" @click="close">点我关闭弹窗</button>
   </div>

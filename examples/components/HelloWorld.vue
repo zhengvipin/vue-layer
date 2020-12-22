@@ -1,20 +1,31 @@
 <template>
-  <div class="hello">
-    <h2>{{ title }}</h2>
-    <br>
-    <button type="button" @click="handleTips" id="MyTip">tips层</button>
-    <br><br>
-    <button type="button" @click="handlePrompt">prompt层</button>
-    <br><br>
-    <button type="button" @click="handleConfirm">询问层</button>
-    <br><br>
-    <button type="button" @click="handleLoading">加载层</button>
-    <br><br>
-    <button type="button" @click="handleOpen">页面层</button>
-    <br><br>
-    <button type="button" @click="handleOpenComponent">组件层<span class="new">New</span></button>
-    <br><br>
-    <a href="https://layer.layui.com/" target="_blank">更多api请查看layer官网</a>
+  <div>
+    <div
+        style="height: 80px;background-color: #16181d;position: fixed;width: 100%;color:#fff;font-size: 20px;font-weight: bold;">
+      <h3>模拟vue-admin-template的header</h3>
+    </div>
+    <div style="display: flex;padding-top: 80px;">
+      <div style="width: 300px;flex: none;">
+        <h2>{{ title }}</h2>
+        <br>
+        <button type="button" @click="handleTips" id="MyTip">tips层</button>
+        <br><br>
+        <button type="button" @click="handlePrompt">prompt层</button>
+        <br><br>
+        <button type="button" @click="handleConfirm">询问层</button>
+        <br><br>
+        <button type="button" @click="handleLoading">加载层</button>
+        <br><br>
+        <button type="button" @click="handleOpen">页面层</button>
+        <br><br>
+        <button type="button" @click="handleOpenComponent">组件层<span class="new">New</span></button>
+        <br><br>
+        <a href="https://layer.layui.com/" target="_blank">更多api请查看layer官网</a>
+      </div>
+      <div id="content" style="flex: auto;border: 2px solid red;height: 800px;">
+
+      </div>
+    </div>
   </div>
 </template>
 
@@ -74,7 +85,8 @@ export default {
         area: ['50%', '50%'],
         content: Child, // 弹窗渲染的组件
         parent: this,// 渲染组件的父级组件
-        data: {value: '我是来自父组件的value参数'} // 给渲染组件传参
+        container: document.getElementById('content'),// 范围内弹窗
+        data: {value: '我是来自父组件的value参数'}, // 给渲染组件传参
       });
     }
   }
@@ -83,20 +95,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
 a {
   color: #42b983;
 }
